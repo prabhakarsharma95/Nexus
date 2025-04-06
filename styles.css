@@ -75,9 +75,12 @@ ul {
 
 .logo {
     font-weight: 700;
+    width: 150px;
+    height: 70px;
     font-size: 24px;
     color: #2563eb;
     letter-spacing: 0.5px;
+    mix-blend: multiply;
 }
 
 .logo span {
