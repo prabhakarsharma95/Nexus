@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus HR Recruitment</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-container">
+                <!-- Logo -->
+                <a href="index.html" class="logo">Nexus<span></span></a>
+
+                <!-- Desktop Navigation -->
+
+
+                <div class="desktop-nav">
+                    <!-- Home -->
+                    <div class="nav-item">
+                        <button class="nav-button" data-dropdown="jobs">
+                            Home
+                        </button>
+                    </div>
+
+
+                    <!-- Jobs Dropdown -->
+                    <div class="nav-item">
+                        <button class="nav-button" data-dropdown="jobs">
+                            Jobs
+                            <svg class="chevron-down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="dropdown" id="jobs-dropdown">
+                            <ul class="dropdown-list">
+                                <li><a href="jobs.html?category=IT & Software" class="dropdown-link">IT & Software</a></li>
+                                <li><a href="jobs.html?category=Finance & Accounting" class="dropdown-link">Finance & Accounting</a></li>
+                                <li><a href="jobs.html?category=Marketing & Sales" class="dropdown-link">Marketing & Sales</a></li>
+                                <li><a href="jobs.html?category=Healthcare & Medical" class="dropdown-link">Healthcare & Medical</a></li>
+                                <li><a href="jobs.html?category=Engineering & Construction" class="dropdown-link">Engineering & Construction</a></li>
+                                <li><a href="jobs.html?category=Administrative & Clerical" class="dropdown-link">Administrative & Clerical</a></li>
+                                <li><a href="jobs.html?type=Remote" class="dropdown-link">Remote Jobs</a></li>
+                                <li><a href="jobs.html" class="dropdown-link">Browse All Jobs</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Careers Dropdown -->
+                    <div class="nav-item">
+                        <button class="nav-button" data-dropdown="careers">
+                            Careers
+                            <svg class="chevron-down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="dropdown" id="careers-dropdown">
+                            <ul class="dropdown-list">
+                                <li><a href="advice.html" class="dropdown-link">Career Advice</a></li>
+                                <li><a href="resume-building.html" class="dropdown-link">Resume Building</a></li>
+                                <li><a href="interview-preparation.html" class="dropdown-link">Interview Preparation</a></li>
+                                <li><a href="salary-negotiation.html" class="dropdown-link">Salary Negotiation</a></li>
+                                <li><a href="career-development.html" class="dropdown-link">Career Development</a></li>
+                                <li><a href="workplace-tips.html" class="dropdown-link">Workplace Tips</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Consultant Dropdown -->
+                    <div class="nav-item">
+                        <button class="nav-button" data-dropdown="consultant">
+                            Consultant
+                            <svg class="chevron-down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="dropdown" id="consultant-dropdown">
+                            <ul class="dropdown-list">
+                                <li><a href="recruitment-services.html" class="dropdown-link">Recruitment Services</a></li>
+                                <li><a href="hr-consulting.html" class="dropdown-link">HR Consulting</a></li>
+                                <li><a href="talent-acquisition.html" class="dropdown-link">Talent Acquisition</a></li>
+                                <li><a href="executive-search.html" class="dropdown-link">Executive Search</a></li>
+                                <li><a href="workforce-planning.html" class="dropdown-link">Workforce Planning</a></li>
+                                <li><a href="employer-branding.html" class="dropdown-link">Employer Branding</a></li>
+                                <li><a href="contact-consultant.html" class="dropdown-link">Contact a Consultant</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Auth Buttons -->
+                <!-- <div class="auth-buttons">
+                    <a href="login.html" class="login-btn">Login</a>
+                    <a href="signup.html" class="signup-btn">Sign Up</a>
+                </div> -->
+
+                <!-- Auth Buttons -->
+                <div class="auth-buttons">
+                    <button class="login-btn">Login</button>
+                    <button class="signup-btn">Sign Up</button>
+                </div>
+
+                <!-- Mobile menu button -->
+                <button class="mobile-menu-btn" id="mobile-menu-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div class="mobile-menu" id="mobile-menu">
+            <div class="container">
+                <!-- Jobs Dropdown Mobile -->
+                <div class="mobile-nav-item">
+                    <button class="mobile-nav-button" data-mobile-dropdown="jobs-mobile">
+                        <span>Jobs</span>
+                        <svg class="chevron-down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="mobile-dropdown" id="jobs-mobile-dropdown">
+                        <ul>
+                            <li><a href="jobs.html?category=IT & Software" class="mobile-dropdown-link">IT & Software</a></li>
+                            <li><a href="jobs.html?category=Finance & Accounting" class="mobile-dropdown-link">Finance & Accounting</a></li>
+                            <li><a href="jobs.html?category=Marketing & Sales" class="mobile-dropdown-link">Marketing & Sales</a></li>
+                            <li><a href="jobs.html?category=Healthcare & Medical" class="mobile-dropdown-link">Healthcare & Medical</a></li>
+                            <li><a href="jobs.html?category=Engineering & Construction" class="mobile-dropdown-link">Engineering & Construction</a></li>
+                            <li><a href="jobs.html" class="mobile-dropdown-link">Browse All Jobs</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Careers Dropdown Mobile -->
+                <div class="mobile-nav-item">
+                    <button class="mobile-nav-button" data-mobile-dropdown="careers-mobile">
+                        <span>Careers</span>
+                        <svg class="chevron-down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="mobile-dropdown" id="careers-mobile-dropdown">
+                        <ul>
+                            <li><a href="career-advice.html" class="mobile-dropdown-link">Career Advice</a></li>
+                            <li><a href="resume-building.html" class="mobile-dropdown-link">Resume Building</a></li>
+                            <li><a href="interview-preparation.html" class="mobile-dropdown-link">Interview Preparation</a></li>
+                            <li><a href="career-development.html" class="mobile-dropdown-link">Career Development</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Consultant Dropdown Mobile -->
+                <div class="mobile-nav-item">
+                    <button class="mobile-nav-button" data-mobile-dropdown="consultant-mobile">
+                        <span>Consultant</span>
+                        <svg class="chevron-down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="mobile-dropdown" id="consultant-mobile-dropdown">
+                        <ul>
+                            <li><a href="recruitment-services.html" class="mobile-dropdown-link">Recruitment Services</a></li>
+                            <li><a href="hr-consulting.html" class="mobile-dropdown-link">HR Consulting</a></li>
+                            <li><a href="talent-acquisition.html" class="mobile-dropdown-link">Talent Acquisition</a></li>
+                            <li><a href="contact-consultant.html" class="mobile-dropdown-link">Contact a Consultant</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Mobile Auth Buttons -->
+                <div class="mobile-auth-buttons">
+                    <a href="login.html" class="login-btn">Login</a>
+                    <a href="signup.html" class="signup-btn">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Search Bar Section -->
+    <section class="search-section">
+        <div class="container">
+            <div class="search-container">
+                <h2 class="search-title">Find Your Dream Job</h2>
+                <p class="search-subtitle">Search thousands of jobs from top employers</p>
+                <form class="search-form" id="job-search-form">
+                    <div class="search-input-group">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="search-icon">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                        <input type="text" id="job-search-input" placeholder="Job title, skills, or company" class="search-input">
+                    </div>
+                    <div class="search-input-group">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="search-icon">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        <input type="text" id="location-search-input" placeholder="City, state, or remote" class="search-input">
+                    </div>
+                    <button type="submit" class="search-button">Search Jobs</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carousel -->
+    <div class="carousel-container">
+        <!-- Slides -->
+        <div class="carousel-slide active" style="background-image: url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');">
+            <div class="carousel-overlay"></div>
+            <div class="slide-content">
+                <h2>Find Your Dream Career With Nexus HR</h2>
+                <p>We connect top talent with leading companies across industries. Our expert recruiters help you find the perfect job match for your skills and career goals.</p>
+                <a href="jobs.html" class="cta-button">Search Jobs</a>
+            </div>
+        </div>
+        <div class="carousel-slide" style="background-image: url('https://images.unsplash.com/photo-1573164574572-cb89e39749b4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');">
+            <div class="carousel-overlay"></div>
+            <div class="slide-content">
+                <h2>Expert Recruitment Solutions</h2>
+                <p>Nexus HR provides comprehensive recruitment services tailored to your company's unique needs. We help you find the right talent to drive your business forward.</p>
+                <a href="recruitment-services.html" class="cta-button">Our Services</a>
+            </div>
+        </div>
+        <div class="carousel-slide" style="background-image: url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');">
+            <div class="carousel-overlay"></div>
+            <div class="slide-content">
+                <h2>Career Development Resources</h2>
+                <p>Access our extensive library of career resources, from resume building to interview preparation. We're committed to helping you succeed at every stage of your career journey.</p>
+                <a href="career-advice.html" class="cta-button">Learn More</a>
+            </div>
+        </div>
+        <div class="carousel-slide" style="background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');">
+            <div class="carousel-overlay"></div>
+            <div class="slide-content">
+                <h2>Trusted by Leading Companies</h2>
+                <p>Join thousands of satisfied clients who trust Nexus HR for their recruitment needs. Our proven track record speaks for itself with successful placements across industries.</p>
+                <a href="testimonials.html" class="cta-button">Client Testimonials</a>
+            </div>
+        </div>
+
+        <!-- Navigation buttons -->
+        <button class="carousel-button prev">&#10094;</button>
+        <button class="carousel-button next">&#10095;</button>
+
+        <!-- Indicators -->
+        <div class="carousel-nav">
+            <div class="carousel-indicator active" data-slide="0"></div>
+            <div class="carousel-indicator" data-slide="1"></div>
+            <div class="carousel-indicator" data-slide="2"></div>
+            <div class="carousel-indicator" data-slide="3"></div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="container">
+            <div class="about-container">
+                <div class="about-images">
+                    <img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Team meeting" class="about-image about-image-1">
+                    <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Office space" class="about-image about-image-2">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Collaboration" class="about-image about-image-3">
+                </div>
+                <div class="about-content">
+                    <h2 class="section-title">About Our Company</h2>
+                    <p class="about-text">
+                        Founded in 2010, Nexus HR has grown to become a leading recruitment and HR solutions provider with a mission to connect exceptional talent with outstanding opportunities. We believe that the right person in the right role can transform both careers and companies.
+                    </p>
+                    <p class="about-text">
+                        Our team of experienced recruiters and HR consultants brings industry-specific expertise to every client engagement. We understand the unique challenges and opportunities in today's competitive job market, and we're committed to delivering personalized solutions that drive success.
+                    </p>
+                    <p class="about-text">
+                        At Nexus HR, we leverage cutting-edge technology and human expertise to streamline the recruitment process, reduce time-to-hire, and ensure the perfect match between candidates and employers. Our approach is consultative, collaborative, and focused on building long-term relationships.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">10K+</div>
+                            <div class="stat-label">Successful Placements</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">500+</div>
+                            <div class="stat-label">Corporate Clients</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">12+</div>
+                            <div class="stat-label">Years of Excellence</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="container">
+            <div class="services-header">
+                <h2 class="section-title">Our Best Services</h2>
+                <p class="section-subtitle">
+                    We offer comprehensive HR and recruitment solutions tailored to meet the unique needs of both employers and job seekers. Our expert team is dedicated to delivering exceptional results.
+                </p>
+            </div>
+            <div class="services-grid">
+                <!-- Service Card 1 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">Permanent Recruitment</h3>
+                        <p class="service-description">
+                            We connect top-tier talent with leading companies across industries, ensuring the perfect match for long-term success and growth.
+                        </p>
+                        <a href="recruitment-services.html" class="service-link">Learn More →</a>
+                    </div>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                        </svg>
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">Executive Search</h3>
+                        <p class="service-description">
+                            Our specialized executive search team identifies and attracts high-caliber leadership talent for critical C-suite and senior management roles.
+                        </p>
+                        <a href="executive-search.html" class="service-link">Learn More →</a>
+                    </div>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 20h9"></path>
+                            <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+                        </svg>
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">Contract Staffing</h3>
+                        <p class="service-description">
+                            Flexible workforce solutions to meet your temporary, project-based, or seasonal staffing needs with qualified professionals.
+                        </p>
+                        <a href="contract-staffing.html" class="service-link">Learn More →</a>
+                    </div>
+                </div>
+
+                <!-- Service Card 4 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">HR Consulting</h3>
+                        <p class="service-description">
+                            Strategic HR advisory services to optimize your workforce, improve employee engagement, and enhance organizational performance.
+                        </p>
+                          and enhance organizational performance.
+                        </p>
+                        <a href="hr-consulting.html" class="service-link">Learn More →</a>
+                    </div>
+                </div>
+
+                <!-- Service Card 5 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">RPO Solutions</h3>
+                        <p class="service-description">
+                            Recruitment Process Outsourcing that streamlines your hiring process, reduces costs, and improves the quality of your talent acquisition.
+                        </p>
+                        <a href="rpo-solutions.html" class="service-link">Learn More →</a>
+                    </div>
+                </div>
+
+                <!-- Service Card 6 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                            <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                        </svg>
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">Career Coaching</h3>
+                        <p class="service-description">
+                            Personalized career guidance, resume optimization, interview preparation, and professional development support for job seekers.
+                        </p>
+                        <a href="career-coaching.html" class="service-link">Learn More →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+                    <!-- Company Info -->
+                    <div class="footer-column">
+                        <div class="footer-logo">Nexus<span>HR</span></div>
+                        <p class="footer-description">
+                            Connecting exceptional talent with outstanding opportunities since 2010. Your trusted partner in recruitment and HR solutions.
+                        </p>
+                        <div class="footer-contact">
+                            <div class="contact-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                                <span>123 Business Avenue, Suite 500<br>New York, NY 10001</span>
+                            </div>
+                            <div class="contact-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
+                                <span>(555) 123-4567</span>
+                            </div>
+                            <div class="contact-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                                <span>info@nexushr.com</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div class="footer-column">
+                        <h3 class="footer-title">Quick Links</h3>
+                        <ul class="footer-links">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="jobs.html">Job Listings</a></li>
+                            <li><a href="employers.html">For Employers</a></li>
+                            <li><a href="job-seekers.html">For Job Seekers</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="privacy.html">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Services -->
+                    <div class="footer-column">
+                        <h3 class="footer-title">Our Services</h3>
+                        <ul class="footer-links">
+                            <li><a href="recruitment-services.html">Permanent Recruitment</a></li>
+                            <li><a href="executive-search.html">Executive Search</a></li>
+                            <li><a href="contract-staffing.html">Contract Staffing</a></li>
+                            <li><a href="hr-consulting.html">HR Consulting</a></li>
+                            <li><a href="rpo-solutions.html">RPO Solutions</a></li>
+                            <li><a href="career-coaching.html">Career Coaching</a></li>
+                            <li><a href="talent-assessment.html">Talent Assessment</a></li>
+                            <li><a href="employer-branding.html">Employer Branding</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Newsletter -->
+                    <div class="footer-column">
+                        <h3 class="footer-title">Stay Connected</h3>
+                        <p class="newsletter-text">Subscribe to our newsletter for the latest job opportunities and career insights.</p>
+                        <form class="newsletter-form">
+                            <div class="form-group">
+                                <input type="email" placeholder="Your email address" class="newsletter-input">
+                                <button type="submit" class="newsletter-button">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                                    </svg>
+                                </button>
+                            </div>
+                        </form>
+                        <div class="social-links">
+                            <a href="#" class="social-link" aria-label="LinkedIn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                    <rect x="2" y="9" width="4" height="12"></rect>
+                                    <circle cx="4" cy="4" r="2"></circle>
+                                </svg>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Twitter">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                                </svg>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Facebook">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                                </svg>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Instagram">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <div class="copyright">
+                        &copy; 2023 NexusHR. All rights reserved.
+                    </div>
+                    <div class="footer-bottom-links">
+                        <a href="terms.html">Terms of Service</a>
+                        <a href="privacy.html">Privacy Policy</a>
+                        <a href="cookies.html">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Login Modal -->
+<div class="auth-modal" id="login-modal">
+    <div class="auth-modal-content">
+        <button class="auth-modal-close" id="close-login-modal">&times;</button>
+        <div class="auth-modal-container">
+            <div class="auth-form-side">
+                <div class="auth-logo">Nexus<span>HR</span></div>
+                <h2 class="auth-title">Welcome Back</h2>
+                <p class="auth-subtitle">Sign in to access your account</p>
+                <form class="auth-form" id="login-form">
+                    <div class="auth-form-group">
+                        <label for="login-email">Email Address</label>
+                        <div class="auth-input-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <input type="email" id="login-email" placeholder="Enter your email" required>
+                        </div>
+                    </div>
+                    <div class="auth-form-group">
+                        <div class="auth-label-container">
+                            <label for="login-password">Password</label>
+                            <a href="#" class="forgot-password">Forgot Password?</a>
+                        </div>
+                        <div class="auth-input-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            </svg>
+                            <input type="password" id="login-password" placeholder="Enter your password" required>
+                            <button type="button" class="password-toggle">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="eye-icon">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="auth-form-group">
+                        <div class="remember-me">
+                            <input type="checkbox" id="remember-me">
+                            <label for="remember-me">Remember me</label>
+                        </div>
+                    </div>
+                    <button type="submit" class="auth-submit-btn">Sign In</button>
+                    <div class="auth-divider">
+                        <span>OR</span>
+                    </div>
+                    <div class="social-login">
+                        <button type="button" class="social-btn google">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12.545,10.239v3.821h5.445c-0.712,2.315-2.647,3.972-5.445,3.972c-3.332,0-6.033-2.701-6.033-6.032s2.701-6.032,6.033-6.032c1.498,0,2.866,0.549,3.921,1.453l2.814-2.814C17.503,2.988,15.139,2,12.545,2C7.021,2,2.543,6.477,2.543,12s4.478,10,10.002,10c8.396,0,10.249-7.85,9.426-11.748L12.545,10.239z"/>
+                            </svg>
+                            <span>Continue with Google</span>
+                        </button>
+                        <button type="button" class="social-btn linkedin">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+                            </svg>
+                            <span>Continue with LinkedIn</span>
+                        </button>
+                    </div>
+                    <div class="auth-switch">
+                        <p>Don't have an account? <a href="#" id="switch-to-signup">Sign Up</a></p>
+                    </div>
+                </form>
+            </div>
+            <div class="auth-image-side">
+                <div class="auth-image">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+                        <style>
+                            .st0{fill:#F0F7FF;} .st1{fill:#BFDBFE;} .st2{fill:#2563EB;} .st3{fill:#1D4ED8;} .st4{fill:#FFFFFF;} .st5{fill:#93C5FD;}
+                        </style>
+                        <circle class="st0" cx="250" cy="250" r="250"/>
+                        <path class="st1" d="M110,320c0,0,30-90,130-80s120,60,190,50s70-60,70-60v170c0,55-45,100-100,100H110V320z"/>
+                        <path class="st2" d="M380,190c-16.6,0-30,13.4-30,30c0,16.6,13.4,30,30,30s30-13.4,30-30C410,203.4,396.6,190,380,190z"/>
+                        <path class="st3" d="M380,230c-5.5,0-10-4.5-10-10c0-5.5,4.5-10,10-10s10,4.5,10,10C390,225.5,385.5,230,380,230z"/>
+                        <path class="st4" d="M240,120c-66.1,0-120,53.9-120,120v120h240V240C360,173.9,306.1,120,240,120z"/>
+                        <path class="st5" d="M240,120c-66.1,0-120,53.9-120,120v20h240v-20C360,173.9,306.1,120,240,120z"/>
+                        <path class="st2" d="M310,320H170c-5.5,0-10-4.5-10-10v-40c0-44.1,35.9-80,80-80s80,35.9,80,80v40C320,315.5,315.5,320,310,320z"/>
+                        <path class="st4" d="M240,220c-22.1,0-40,17.9-40,40v60h80v-60C280,237.9,262.1,220,240,220z"/>
+                        <path class="st3" d="M240,280c-11,0-20-9-20-20s9-20,20-20s20,9,20,20S251,280,240,280z"/>
+                        <path class="st4" d="M236,270c-2.2,0-4-1.8-4-4s1.8-4,4-4s4,1.8,4,4S238.2,270,236,270z"/>
+                    </svg>
+                </div>
+                <div class="auth-image-text">
+                    <h3>Secure Access</h3>
+                    <p>Your data is protected with industry-leading encryption.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Signup Modal -->
+<div class="auth-modal" id="signup-modal">
+    <div class="auth-modal-content">
+        <button class="auth-modal-close" id="close-signup-modal">&times;</button>
+        <div class="auth-modal-container">
+            <div class="auth-form-side">
+                <div class="auth-logo">Nexus<span>HR</span></div>
+                <h2 class="auth-title">Create an Account</h2>
+                <p class="auth-subtitle">Join our community of professionals</p>
+                <form class="auth-form" id="signup-form">
+                    <div class="auth-form-row">
+                        <div class="auth-form-group">
+                            <label for="signup-first-name">First Name</label>
+                            <div class="auth-input-container">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="12" cy="7" r="4"></circle>
+                                </svg>
+                                <input type="text" id="signup-first-name" placeholder="First name" required>
+                            </div>
+                        </div>
+                        <div class="auth-form-group">
+                            <label for="signup-last-name">Last Name</label>
+                            <div class="auth-input-container">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="12" cy="7" r="4"></circle>
+                                </svg>
+                                <input type="text" id="signup-last-name" placeholder="Last name" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="auth-form-group">
+                        <label for="signup-email">Email Address</label>
+                        <div class="auth-input-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <input type="email" id="signup-email" placeholder="Enter your email" required>
+                        </div>
+                    </div>
+                    <div class="auth-form-group">
+                        <label for="signup-password">Password</label>
+                        <div class="auth-input-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            </svg>
+                            <input type="password" id="signup-password" placeholder="Create a password" required>
+                            <button type="button" class="password-toggle">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="eye-icon">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="password-strength">
+                            <div class="strength-meter">
+                                <div class="strength-segment"></div>
+                                <div class="strength-segment"></div>
+                                <div class="strength-segment"></div>
+                                <div class="strength-segment"></div>
+                            </div>
+                            <span class="strength-text">Password strength</span>
+                        </div>
+                    </div>
+                    <div class="auth-form-group">
+                        <label for="signup-confirm-password">Confirm Password</label>
+                        <div class="auth-input-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                            </svg>
+                            <input type="password" id="signup-confirm-password" placeholder="Confirm your password" required>
+                            <button type="button" class="password-toggle">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="eye-icon">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="auth-form-group">
+                        <label>I am a</label>
+                        <div class="role-selector">
+                            <label class="role-option">
+                                <input type="radio" name="role" value="job-seeker" checked>
+                                <div class="role-option-content">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="12" cy="7" r="4"></circle>
+                                    </svg>
+                                    <span>Job Seeker</span>
+                                </div>
+                            </label>
+                            <label class="role-option">
+                                <input type="radio" name="role" value="employer">
+                                <div class="role-option-content">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                                    </svg>
+                                    <span>Employer</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="auth-form-group">
+                        <div class="terms-checkbox">
+                            <input type="checkbox" id="terms-agree" required>
+                            <label for="terms-agree">I agree to the <a href="terms.html">Terms of Service</a> and <a href="privacy.html">Privacy Policy</a></label>
+                        </div>
+                    </div>
+                    <button type="submit" class="auth-submit-btn">Create Account</button>
+                    <div class="auth-divider">
+                        <span>OR</span>
+                    </div>
+                    <div class="social-login">
+                        <button type="button" class="social-btn google">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12.545,10.239v3.821h5.445c-0.712,2.315-2.647,3.972-5.445,3.972c-3.332,0-6.033-2.701-6.033-6.032s2.701-6.032,6.033-6.032c1.498,0,2.866,0.549,3.921,1.453l2.814-2.814C17.503,2.988,15.139,2,12.545,2C7.021,2,2.543,6.477,2.543,12s4.478,10,10.002,10c8.396,0,10.249-7.85,9.426-11.748L12.545,10.239z"/>
+                            </svg>
+                            <span>Continue with Google</span>
+                        </button>
+                        <button type="button" class="social-btn linkedin">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+                            </svg>
+                            <span>Continue with LinkedIn</span>
+                        </button>
+                    </div>
+                    <div class="auth-switch">
+                        <p>Already have an account? <a href="#" id="switch-to-login">Sign In</a></p>
+                    </div>
+                </form>
+            </div>
+            <div class="auth-image-side">
+                <div class="auth-image">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+                        <style>
+                            .st0{fill:#F0F7FF;} .st1{fill:#BFDBFE;} .st2{fill:#2563EB;} .st3{fill:#1D4ED8;} .st4{fill:#FFFFFF;} .st5{fill:#93C5FD;}
+                        </style>
+                        <circle class="st0" cx="250" cy="250" r="250"/>
+                        <path class="st1" d="M100,350c0,0,50-80,150-60s120,40,150,20s100-80,100-80v170c0,55-45,100-100,100H100V350z"/>
+                        <path class="st2" d="M250,120c-55.2,0-100,44.8-100,100v160h200V220C350,164.8,305.2,120,250,120z"/>
+                        <path class="st4" d="M250,140c-44.2,0-80,35.8-80,80v140h160V220C330,175.8,294.2,140,250,140z"/>
+                        <path class="st5" d="M330,240H170c0-44.2,35.8-80,80-80S330,195.8,330,240z"/>
+                        <circle class="st3" cx="250" cy="200" r="30"/>
+                        <path class="st4" d="M250,320L250,320c-22.1,0-40-17.9-40-40v-40h80v40C290,302.1,272.1,320,250,320z"/>
+                        <path class="st3" d="M290,280h-80v-20c0-22.1,17.9-40,40-40l0,0c22.1,0,40,17.9,40,40V280z"/>
+                        <circle class="st4" cx="250" cy="200" r="10"/>
+                        <circle class="st2" cx="380" cy="180" r="30"/>
+                        <circle class="st4" cx="380" cy="180" r="10"/>
+                        <circle class="st2" cx="120" cy="200" r="20"/>
+                        <circle class="st4" cx="120" cy="200" r="6"/>
+                    </svg>
+                </div>
+                <div class="auth-image-text">
+                    <h3>Join Our Community</h3>
+                    <p>Connect with top employers and find your dream job.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

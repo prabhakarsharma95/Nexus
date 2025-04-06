@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Listings - Nexus HR Recruitment</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar (Same as index.html) -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-container">
+                <!-- Logo -->
+                <a href="index.html" class="logo">Nexus<span>HR</span></a>
+
+                <!-- Desktop Navigation -->
+                <div class="desktop-nav">
+                    <!-- Jobs Dropdown -->
+                    <div class="nav-item">
+                        <button class="nav-button" data-dropdown="jobs">
+                            Jobs
+                            <svg class="chevron-down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="dropdown" id="jobs-dropdown">
+                            <ul class="dropdown-list">
+                                <li><a href="jobs.html?category=IT & Software" class="dropdown-link">IT & Software</a></li>
+                                <li><a href="jobs.html?category=Finance & Accounting" class="dropdown-link">Finance & Accounting</a></li>
+                                <li><a href="jobs.html?category=Marketing & Sales" class="dropdown-link">Marketing & Sales</a></li>
+                                <li><a href="jobs.html?category=Healthcare & Medical" class="dropdown-link">Healthcare & Medical</a></li>
+                                <li><a href="jobs.html?category=Engineering & Construction" class="dropdown-link">Engineering & Construction</a></li>
+                                <li><a href="jobs.html?category=Administrative & Clerical" class="dropdown-link">Administrative & Clerical</a></li>
+                                <li><a href="jobs.html?type=Remote" class="dropdown-link">Remote Jobs</a></li>
+                                <li><a href="jobs.html" class="dropdown-link">Browse All Jobs</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Careers Dropdown -->
+                    <div class="nav-item">
+                        <button class="nav-button" data-dropdown="careers">
+                            Careers
+                            <svg class="chevron-down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="dropdown" id="careers-dropdown">
+                            <ul class="dropdown-list">
+                                <li><a href="career-advice.html" class="dropdown-link">Career Advice</a></li>
+                                <li><a href="resume-building.html" class="dropdown-link">Resume Building</a></li>
+                                <li><a href="interview-preparation.html" class="dropdown-link">Interview Preparation</a></li>
+                                <li><a href="salary-negotiation.html" class="dropdown-link">Salary Negotiation</a></li>
+                                <li><a href="career-development.html" class="dropdown-link">Career Development</a></li>
+                                <li><a href="workplace-tips.html" class="dropdown-link">Workplace Tips</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Consultant Dropdown -->
+                    <div class="nav-item">
+                        <button class="nav-button" data-dropdown="consultant">
+                            Consultant
+                            <svg class="chevron-down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="dropdown" id="consultant-dropdown">
+                            <ul class="dropdown-list">
+                                <li><a href="recruitment-services.html" class="dropdown-link">Recruitment Services</a></li>
+                                <li><a href="hr-consulting.html" class="dropdown-link">HR Consulting</a></li>
+                                <li><a href="talent-acquisition.html" class="dropdown-link">Talent Acquisition</a></li>
+                                <li><a href="executive-search.html" class="dropdown-link">Executive Search</a></li>
+                                <li><a href="workforce-planning.html" class="dropdown-link">Workforce Planning</a></li>
+                                <li><a href="employer-branding.html" class="dropdown-link">Employer Branding</a></li>
+                                <li><a href="contact-consultant.html" class="dropdown-link">Contact a Consultant</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Auth Buttons -->
+                <div class="auth-buttons">
+                    <a href="login.html" class="login-btn">Login</a>
+                    <a href="signup.html" class="signup-btn">Sign Up</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <button class="mobile-menu-btn" id="mobile-menu-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile menu (Same as index.html) -->
+        <div class="mobile-menu" id="mobile-menu">
+            <!-- Mobile menu content (same as index.html) -->
+        </div>
+    </nav>
+
+    <!-- Jobs Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Job Listings</h1>
+            <p class="page-subtitle">Find your perfect career opportunity</p>
+        </div>
+    </section>
+
+    <!-- Jobs Search and Filter -->
+    <section class="jobs-search-section">
+        <div class="container">
+            <div class="jobs-search-container">
+                <form class="jobs-search-form" id="jobs-filter-form">
+                    <div class="search-input-group">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="search-icon">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                        <input type="text" id="jobs-search-input" placeholder="Job title, skills, or company" class="search-input">
+                    </div>
+                    <div class="search-input-group">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="search-icon">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        <input type="text" id="jobs-location-input" placeholder="City, state, or remote" class="search-input">
+                    </div>
+                    <div class="filter-group">
+                        <select id="jobs-category-select" class="filter-select">
+                            <option value="">All Categories</option>
+                            <option value="IT & Software">IT & Software</option>
+                            <option value="Finance & Accounting">Finance & Accounting</option>
+                            <option value="Marketing & Sales">Marketing & Sales</option>
+                            <option value="Healthcare & Medical">Healthcare & Medical</option>
+                            <option value="Engineering & Construction">Engineering & Construction</option>
+                            <option value="Administrative & Clerical">Administrative & Clerical</option>
+                            <option value="Human Resources">Human Resources</option>
+                            <option value="Customer Service">Customer Service</option>
+                            <option value="Management">Management</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <select id="jobs-type-select" class="filter-select">
+                            <option value="">All Job Types</option>
+                            <option value="Full-time">Full-time</option>
+                            <option value="Part-time">Part-time</option>
+                            <option value="Contract">Contract</option>
+                            <option value="Remote">Remote</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="search-button">Search Jobs</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Jobs Listings -->
+    <section class="jobs-listing-section">
+        <div class="container">
+            <div class="jobs-results-info">
+                <p id="jobs-count">Showing all jobs</p>
+                <div class="jobs-sort">
+                    <label for="jobs-sort-select">Sort by:</label>
+                    <select id="jobs-sort-select" class="sort-select">
+                        <option value="newest">Newest</option>
+                        <option value="oldest">Oldest</option>
+                        <option value="title-asc">Title (A-Z)</option>
+                        <option value="title-desc">Title (Z-A)</option>
+                    </select>
+                </div>
+            </div>
+            <div class="jobs-grid" id="jobs-container">
+                <!-- Jobs will be loaded here dynamically -->
+                <div class="loading-spinner">
+                    <div class="spinner"></div>
+                    <p>Loading jobs...</p>
+                </div>
+            </div>
+            <div class="no-results" id="no-jobs-message" style="display: none;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="8" x2="12" y2="12"></line>
+                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                </svg>
+                <h3>No jobs found</h3>
+                <p>Try adjusting your search criteria or browse all available jobs.</p>
+                <button id="reset-filters-btn" class="reset-button">Reset Filters</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Job Details Modal -->
+    <div class="modal" id="job-details-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-job-title">Job Title</h2>
+                <button class="modal-close" id="close-modal">&times;</button>
+            </div>
+            <div class="modal-body" id="modal-job-details">
+                <!-- Job details will be loaded here -->
+            </div>
+            <div class="modal-footer">
+                <button class="apply-button" id="apply-job-btn">Apply Now</button>
+                <button class="save-button" id="save-job-btn">Save Job</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer (Same as index.html) -->
+    <footer class="footer">
+        <!-- Footer content (same as index.html) -->
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
